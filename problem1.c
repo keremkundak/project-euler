@@ -6,5 +6,5 @@ int main(void){
         if(i % 3 == 0 || i % 5 == 0 )// if the number is multiple of 3 or 5
             sum += i; // add it to sum
     printf("%d\n", sum); // print the answer 
-    return 0;
+    return 0; // successful execution
 }
