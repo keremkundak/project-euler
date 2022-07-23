@@ -6,7 +6,6 @@
 
 unsigned sums(unsigned);
 unsigned powsums(unsigned);
-unsigned prime(unsigned);
 
 int main(void){
     unsigned i, sump = 0, sum = 0;
