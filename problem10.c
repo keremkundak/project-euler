@@ -2,18 +2,19 @@
  * Find the summation of all primes below 2 million
  */
 #include<stdio.h>
+#include<math.h>
 
-int prime(long long n);
+int isPrime(long long n);
 
 int main(void){
     long long sum = 0, i;
-    for(i = 1; i<2000000; i+=2){
-        if(!prime(i)) sum += i;
+    for(i = 0; i<2000000; i++){
+        if(isPrime(i)) sum += i;
     }
-    printf("\n%lld", sum);
+    printf("%lld\n", sum);
 }
 
-int prime(long long n)// returns 0 if n is prime
+/* int prime(long long n)// returns 0 if n is prime
 {
 	long long i;
     if(n%2 == 0 || n == 1) return 1;
@@ -25,4 +26,19 @@ int prime(long long n)// returns 0 if n is prime
 			return 1;
 	}
 	return 0;
+} */
+
+int isPrime(long long n){
+	long long i;
+	if(n == 0 || n == 1 || (n % 2 == 0 && n > 2)){
+		return 0;
+	}
+	else{
+		for(i = 3; i<= ((long long)sqrt(n)) + 1; i++){
+			if(n % i == 0){
+				return 0;
+			}
+		}
+		return 1;
+	}
 }
