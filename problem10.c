@@ -14,20 +14,6 @@ int main(void){
     printf("%lld\n", sum);
 }
 
-/* int prime(long long n)// returns 0 if n is prime
-{
-	long long i;
-    if(n%2 == 0 || n == 1) return 1;
-	for(i=2;i<=n/2;i++)
-	{
-		if(n%i!=0)
-			continue;
-		else
-			return 1;
-	}
-	return 0;
-} */
-
 int isPrime(long long n){
 	long long i;
 	if(n == 0 || n == 1 || (n % 2 == 0 && n > 2)){
