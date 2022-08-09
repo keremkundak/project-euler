@@ -64,6 +64,7 @@ int main(void){
     // 1000
     sum += ones[1];
     sum += thousand;
+    
     printf("%u", sum);
 
     return 0;
